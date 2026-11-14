@@ -1,5 +1,3 @@
-import com.jwebmp.plugins.jqplot.implementations.JQPlotInclusionModule;
-
 module com.jwebmp.plugins.jqplot {
 	exports com.jwebmp.plugins.jqplot;
 	exports com.jwebmp.plugins.jqplot.parts;
@@ -21,7 +19,6 @@ module com.jwebmp.plugins.jqplot {
 	requires com.guicedee.guicedinjection;
 
 	provides com.jwebmp.core.services.IPageConfigurator with com.jwebmp.plugins.jqplot.JQPlotPageConfigurator;
-	provides com.guicedee.client.services.config.IGuiceScanModuleInclusions with JQPlotInclusionModule;
 	provides com.guicedee.client.services.config.IGuiceScanModuleExclusions with com.jwebmp.plugins.jqplot.implementations.JQPlotExclusionsModule;
 
 	opens com.jwebmp.plugins.jqplot to tools.jackson.databind, com.google.guice, com.jwebmp.core;
@@ -36,4 +33,6 @@ module com.jwebmp.plugins.jqplot {
 	opens com.jwebmp.plugins.jqplot.options.title to tools.jackson.databind, com.jwebmp.core;
 	opens com.jwebmp.plugins.jqplot.graphs to tools.jackson.databind, com.jwebmp.core;
 	opens com.jwebmp.plugins.jqplot.graphs.display to tools.jackson.databind, com.jwebmp.core;
+
+    provides com.guicedee.client.services.config.IGuiceScanJarExclusions with com.jwebmp.plugins.jqplot.implementations.JQPlotExclusionsModule;
 }

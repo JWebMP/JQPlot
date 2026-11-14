@@ -2,7 +2,7 @@ package com.jwebmp.plugins.jqplot;
 
 import tools.jackson.core.JacksonException;
 import com.guicedee.client.IGuiceContext;
-import com.guicedee.client.implementations.ObjectBinderKeys;
+import com.guicedee.modules.services.jsonrepresentation.ObjectBinderKeys;
 import com.jwebmp.core.Component;
 import com.jwebmp.core.base.html.attributes.NoAttributes;
 import com.jwebmp.core.base.html.interfaces.*;
